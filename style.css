@@ -1,0 +1,189 @@
+:root{
+    --color-one:#E1CBC6;
+   --color-two: #C39389;
+   --color-three: #DC8962;
+   --color-fourth :#F0B791;
+  --color-fifth: #F3D9B5;
+   --color-sixth:#EFE8E6;
+ }
+ 
+ body{
+   margin:0;
+   padding: 1em 3em;
+   background:#F2CEAA;
+ }
+ h1{
+   color:black;
+   font-size:2em;
+   text-align: center;
+   text-transform: uppercase;
+   font-family: 'Cardo', serif;
+   font-weight: 700;
+ }
+ .colors{
+   display:flex;
+   justify-content:center;
+   flex-wrap:wrap;
+   gap:2em;
+   margin: 5em;
+ }
+ .color--dot{
+   display:inline-block;
+   height:5em;
+   width:5em;
+   background:white;
+   border-radius:50%;
+ /*   border:1px solid black; */
+    box-shadow: 0px 0px 15px -5px rgba(0,0,0,0.5);
+ }
+ 
+ .color--dot__one{
+   background:var(--color-one);
+ }
+ .color--dot__two{
+   background:var(--color-two);
+ }
+ .color--dot__three{
+   background:var(--color-three);
+ }
+ .color--dot__fourth{
+   background:var(--color-fourth);
+ }
+ .color--dot__fifth{
+   background:var(--color-fifth);
+ }
+ .color--dot__sixth{
+   background:var(--color-sixth);
+ }
+ /*generic style for dice*/
+ .dice-wrapper{
+     display:flex;
+   flex-wrap:wrap;
+   justify-content:center;
+ }
+ .dice{
+   margin: 1.5em;
+   max-width:150px;
+   width:100%;
+   height:150px;
+   background:tomato;
+   padding: 1em;
+   border-radius: 10%;
+    box-shadow: 0px 0px 15px -5px rgba(0,0,0,0.73);
+ }
+ 
+ .dice .dice-dot{
+  box-shadow: 0px 0px 15px -5px rgba(0,0,0,0.73);
+    display: block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color:white;
+ }
+ 
+ /* ONE DOT */
+ .dice__one-dot {
+   display:flex;
+   justify-content:center;
+   align-items: center;
+ }
+ 
+ /* TWO-DOT */
+ .dice__two-dot {
+   display:flex;
+    justify-content:space-between;
+ }
+ 
+ .dice__two-dot .dice-dot:nth-of-type(1){
+ align-self: flex-end;
+ }
+ 
+ /* THREE-DOT */
+ .dice__three-dot{
+   display:flex;
+   justify-content: space-between;
+ }
+ 
+ .dice__three-dot .dice-dot:nth-of-type(2){
+ align-self: center;
+ }
+ 
+ .dice__three-dot .dice-dot:nth-of-type(3){
+ align-self: flex-end;
+ }
+ 
+ /* FOUR-DOT */
+ .dice__four-dot{
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr;
+   grid-template-rows: 1fr 1fr 1fr;
+   gap: 0px 0px;
+   grid-template-areas:
+     "pos1 . pos2"
+     ". . ."
+     "pos3 . pos4";
+   justify-items: space-between;
+ }
+ 
+ .dice__four-dot .dice-dot:nth-of-type(1){
+   grid-area: pos1;
+ }
+ .dice__four-dot .dice-dot:nth-of-type(2){
+   grid-area: pos2;
+   justify-self:flex-end;
+ }
+ .dice__four-dot .dice-dot:nth-of-type(3){
+   grid-area: pos3;
+     align-self:flex-end;
+ }
+ .dice__four-dot .dice-dot:nth-of-type(4){
+    grid-area: pos4;
+   justify-self:flex-end;
+   align-self:flex-end;
+ }
+ 
+ /* FIVE DOTS */
+ .dice__five-dot{
+   display:grid;
+   grid: "pos1 . pos2"
+         ". pos3 ."
+         "pos4 . pos5";
+ }
+ .dice__five-dot .dice-dot:nth-of-type(1){
+    grid-area: pos1;
+ }
+ .dice__five-dot .dice-dot:nth-of-type(2){
+    grid-area: pos2;
+   justify-self:end;
+ }
+ .dice__five-dot .dice-dot:nth-of-type(3){
+    grid-area: pos3;
+   justify-self:center;
+   align-self:center;
+ }
+ .dice__five-dot .dice-dot:nth-of-type(4){
+    grid-area: pos4;
+   align-self:end;
+ }
+ .dice__five-dot .dice-dot:nth-of-type(5){
+    grid-area: pos5;
+   justify-self:end;
+   align-self:end;
+ }
+ 
+ /* SIX DOTS */
+ .dice__six-dot{
+   display:flex;
+   justify-content:space-between;
+ }
+ .dice__six-dot .dice__six-dot--col1{
+   display:flex;
+   flex-direction:column;
+   justify-content:space-between;
+ }
+ 
+ .dice__six-dot .dice__six-dot--col2{
+   display:flex;
+   flex-direction:column;
+   justify-content:space-between;
+ }
