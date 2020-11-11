@@ -4,12 +4,9 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
   position: relative;
 
-  animation: bounceInLeft; /* referring directly to the animation's @keyframe declaration */
-  animation-duration: 3s; /* don't forget to set a duration! */
+  
 }
 
 
@@ -22,15 +19,13 @@
   padding: 1rem;
   border-radius: 10%;
   box-shadow: 0px 0px 15px -5px rgba(0, 0, 0, 0.73);
-  display: none;
 }
 
 .dice__visibility {
-  display:block;
   border : 5px solid saddlebrown;
-  animation: bounce; /* referring directly to the animation's @keyframe declaration */
-  animation-duration: 2s; /* don't forget to set a duration! */
-  animation-delay: 3s;
+   animation: heartBeat; /*referring directly to the animation's @keyframe declaration */
+   animation-duration: 2s;/* don't forget to set a duration! */
+
 }
 
 .dice .dice-dot {

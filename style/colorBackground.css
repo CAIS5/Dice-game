@@ -2,14 +2,14 @@
     display:flex;
     justify-content:center;
     flex-wrap:wrap;
-    gap:2em;
-    margin: 5em;
+    gap:1em;
+    margin: 1em;
   }
   
   .color--dot{
     display:inline-block;
-    height:5em;
-    width:5em;
+    height:2.2em;
+    width:2.2em;
     background:white;
     border-radius:50%;
      box-shadow: 0px 0px 15px -5px rgba(0,0,0,0.5);

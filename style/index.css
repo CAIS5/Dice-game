@@ -1,6 +1,6 @@
 @import url('dice.css');
 @import url('colorBackground.css');
-
+@import url('button.css');
 :root {
   --color-first: #E1CBC6;
   --color-second: #C39389;
@@ -18,6 +18,71 @@
 
 body {
   margin: 0;
-  padding: 1em 3em;
-  background: #F2CEAA;
+  padding: 1em 2em;
+  background: var(--color-fifth);
 }
+
+main{
+  position: relative;
+}
+
+h1{
+  font-family: Georgia, sans-serif;
+  font-size: 5em;
+  letter-spacing: -2px;
+  font-weight: bold;
+  text-align: center;
+  color:tomato;
+
+  animation: bounceInLeft; 
+  animation-duration: 3s; 
+}
+hr.style-seven {
+  overflow: visible; /* For IE */
+  height: 30px;
+  border-style: solid;
+  border-color: black;
+  border-width: 1px 0 0 0;
+  border-radius: 20px;
+  margin-top: 31px;
+}
+hr.style-seven:before { /* Not really supposed to work, but does */
+  display: block;
+  content: "";
+  height: 30px;
+  margin-top:-31px;
+  border-style: solid;
+  border-color: black;
+  border-width: 0 0 1px 0;
+  border-radius: 20px;
+}
+
+
+
+
+
+@media screen and (max-width:570px){
+
+  h1{
+    font-size: 3em;
+  }
+  .dice-wrapper{
+    margin:0;
+  }
+  .dice{
+    display: none;
+    margin:0;
+  }
+
+  .dice__visibility {
+    transform: scale(0.8);
+    display: flex;
+  }
+
+  .colors {
+    transform: scale(0.8);
+    margin: 1em;
+  }
+  .
+}
+

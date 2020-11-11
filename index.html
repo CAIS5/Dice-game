@@ -12,57 +12,8 @@
   <link rel="stylesheet" href="node_modules/animate.css/animate.css">
   <link href="https://fonts.googleapis.com/css2?family=Cardo:wght@700&display=swap" rel="stylesheet">
 </head>
-
-  
-
-
-  <button onclick="changingFlexOrder()">Start</button>
-  <div class="dice-wrapper animate__bounceInLeft ">
-    <div class="dice dice__one-dot dice__visibility animate__animated animate__bounce">
-      <span class="dice-dot"></span>
-    </div>
-
-    <div class="dice dice__two-dot">
-      <span class="dice-dot"></span>
-      <span class="dice-dot"></span>
-    </div>
-
-    <div class="dice dice__three-dot">
-      <span class="dice-dot"></span>
-      <span class="dice-dot"></span>
-      <span class="dice-dot"></span>
-    </div>
-
-    <div class="dice dice__four-dot">
-      <span class="dice-dot" id="dot-1"></span>
-      <span class="dice-dot" id="dot-2"></span>
-      <span class="dice-dot" id="dot-3"></span>
-      <span class="dice-dot" id="dot-4"></span>
-    </div>
-
-    <div class="dice dice__five-dot">
-      <span class="dice-dot"></span>
-      <span class="dice-dot"></span>
-      <span class="dice-dot"></span>
-      <span class="dice-dot"></span>
-      <span class="dice-dot"></span>
-    </div>
-
-    <div class="dice dice__six-dot">
-      <div class="dice__six-dot--col1">
-        <span class="dice-dot"></span>
-        <span class="dice-dot"></span>
-        <span class="dice-dot"></span>
-      </div>
-      <div class="dice__six-dot--col2">
-        <span class="dice-dot"></span>
-        <span class="dice-dot"></span>
-        <span class="dice-dot"></span>
-      </div>
-    </div>
-  </div>
-
-
+<section>
+  <h1>Dice Game</h1>
   <div class="colors">
     <span class="color--dot color--dot__first"></span>
     <span class="color--dot color--dot__second"></span>
@@ -71,7 +22,82 @@
     <span class="color--dot color--dot__fifth"></span>
     <span class="color--dot color--dot__sixth"></span>
   </div>
-  <script src="index.js" async defer></script>
+
+  <hr class="style-seven">
+
+  
+  <div class="btn-container">
+    <button class="btn btn--onePlayer" onclick="changingFlexOrder()">1 player</button>
+    <button class="btn btn--twoPlayers" onclick="changingFlexOrder()">2 player</button>
+    <button class="btn btn--help">help</button>
+    <div class="overlay">
+      <h2>RULE : </h2>
+      <p>A simple dice game, where you just roll a dice and get a score according to a dice face. A player who reaches
+        to
+        a target score before another player is winner.There are two modes :
+        <ul>
+          <li> 1 player : which you versus computer</li>
+          <li> 2 player : which you versus another player</li>
+        </ul>
+      </p>
+      <p>During a game, you can choose a raise to double wining score,but there is a penalty if you lose. You will lose
+        half of score you got so far. </p>
+      <button class="btn btn--close">Close</button>
+    </div>
+</section>
+
+<section>
+  <div class="btn-container btn-gameplay">
+    <button class="btn btn-dice">Dice</button>
+    <h3 id="playerName"></h3>
+    <div class="dice-wrapper">
+      <div value="1" class="dice dice__one-dot">
+        <span class="dice-dot"></span>
+      </div>
+  
+      <div value="2" class="dice dice__two-dot">
+        <span class="dice-dot"></span>
+        <span class="dice-dot"></span>
+      </div>
+  
+      <div value="3" class="dice dice__three-dot">
+        <span class="dice-dot"></span>
+        <span class="dice-dot"></span>
+        <span class="dice-dot"></span>
+      </div>
+  
+      <div value="4" class="dice dice__four-dot">
+        <span class="dice-dot" id="dot-1"></span>
+        <span class="dice-dot" id="dot-2"></span>
+        <span class="dice-dot" id="dot-3"></span>
+        <span class="dice-dot" id="dot-4"></span>
+      </div>
+  
+      <div value="5" class="dice dice__five-dot">
+        <span class="dice-dot"></span>
+        <span class="dice-dot"></span>
+        <span class="dice-dot"></span>
+        <span class="dice-dot"></span>
+        <span class="dice-dot"></span>
+      </div>
+  
+      <div value="6" class="dice dice__six-dot">
+        <div class="dice__six-dot--col1">
+          <span class="dice-dot"></span>
+          <span class="dice-dot"></span>
+          <span class="dice-dot"></span>
+        </div>
+        <div class="dice__six-dot--col2">
+          <span class="dice-dot"></span>
+          <span class="dice-dot"></span>
+          <span class="dice-dot"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<hr class="style-seven">
+<script src="index.js" async defer></script>
 </body>
 
 </html>
