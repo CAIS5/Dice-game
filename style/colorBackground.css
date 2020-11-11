@@ -1,0 +1,35 @@
+.colors{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:2em;
+    margin: 5em;
+  }
+  
+  .color--dot{
+    display:inline-block;
+    height:5em;
+    width:5em;
+    background:white;
+    border-radius:50%;
+     box-shadow: 0px 0px 15px -5px rgba(0,0,0,0.5);
+  }
+  
+  .color--dot__first{
+    background:var(--color-first);
+  }
+  .color--dot__second{
+    background:var(--color-second);
+  }
+  .color--dot__third{
+    background:var(--color-third);
+  }
+  .color--dot__fourth{
+    background:var(--color-fourth);
+  }
+  .color--dot__fifth{
+    background:var(--color-fifth);
+  }
+  .color--dot__sixth{
+    background:var(--color-sixth);
+  }

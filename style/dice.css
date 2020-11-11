@@ -1,0 +1,150 @@
+@import url('anim.css');
+/*generic style for dice*/
+.dice-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  position: relative;
+
+  animation: bounceInLeft; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 3s; /* don't forget to set a duration! */
+}
+
+
+.dice {
+  margin: 1.5em;
+  max-width: 150px;
+  width: 100%;
+  height: 150px;
+  background: tomato;
+  padding: 1rem;
+  border-radius: 10%;
+  box-shadow: 0px 0px 15px -5px rgba(0, 0, 0, 0.73);
+  display: none;
+}
+
+.dice__visibility {
+  display:block;
+  border : 5px solid saddlebrown;
+  animation: bounce; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 2s; /* don't forget to set a duration! */
+  animation-delay: 3s;
+}
+
+.dice .dice-dot {
+  box-shadow: 0px 0px 15px -5px rgba(0, 0, 0, 0.73);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: white;
+}
+
+/* ONE DOT */
+.dice__one-dot {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* TWO-DOT */
+.dice__two-dot {
+  display: flex;
+  justify-content: space-between;
+}
+
+.dice__two-dot .dice-dot:nth-of-type(1) {
+  align-self: flex-end;
+}
+
+/* THREE-DOT */
+.dice__three-dot {
+  display: flex;
+  justify-content: space-between;
+}
+
+.dice__three-dot .dice-dot:nth-of-type(2) {
+  align-self: center;
+}
+
+.dice__three-dot .dice-dot:nth-of-type(3) {
+  align-self: flex-end;
+}
+
+/* FOUR-DOT */
+.dice__four-dot {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "pos1 . pos2"
+    ". . ."
+    "pos3 . pos4";
+  justify-items: space-between;
+}
+
+.dice__four-dot .dice-dot:nth-of-type(1) {
+  grid-area: pos1;
+}
+.dice__four-dot .dice-dot:nth-of-type(2) {
+  grid-area: pos2;
+  justify-self: flex-end;
+}
+.dice__four-dot .dice-dot:nth-of-type(3) {
+  grid-area: pos3;
+  align-self: flex-end;
+}
+.dice__four-dot .dice-dot:nth-of-type(4) {
+  grid-area: pos4;
+  justify-self: flex-end;
+  align-self: flex-end;
+}
+
+/* FIVE DOTS */
+.dice__five-dot {
+  display: grid;
+  grid:
+    "pos1 . pos2"
+    ". pos3 ."
+    "pos4 . pos5";
+}
+.dice__five-dot .dice-dot:nth-of-type(1) {
+  grid-area: pos1;
+}
+.dice__five-dot .dice-dot:nth-of-type(2) {
+  grid-area: pos2;
+  justify-self: end;
+}
+.dice__five-dot .dice-dot:nth-of-type(3) {
+  grid-area: pos3;
+  justify-self: center;
+  align-self: center;
+}
+.dice__five-dot .dice-dot:nth-of-type(4) {
+  grid-area: pos4;
+  align-self: end;
+}
+.dice__five-dot .dice-dot:nth-of-type(5) {
+  grid-area: pos5;
+  justify-self: end;
+  align-self: end;
+}
+
+/* SIX DOTS */
+.dice__six-dot {
+  display: flex;
+  justify-content: space-between;
+}
+.dice__six-dot .dice__six-dot--col1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.dice__six-dot .dice__six-dot--col2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}

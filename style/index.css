@@ -1,0 +1,23 @@
+@import url('dice.css');
+@import url('colorBackground.css');
+
+:root {
+  --color-first: #E1CBC6;
+  --color-second: #C39389;
+  --color-third: #DC8962;
+  --color-fourth: #F0B791;
+  --color-fifth: #F3D9B5;
+  --color-sixth: #EFE8E6;
+  --breakpoint-small: 420px;
+  --breakpoint-mediumL: 850px;
+  --breakpoint-large: 1450px;
+
+  --animate-duration: 30000s;
+  --animate-delay: 1.9s;
+}
+
+body {
+  margin: 0;
+  padding: 1em 3em;
+  background: #F2CEAA;
+}
