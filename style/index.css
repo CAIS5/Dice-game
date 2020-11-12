@@ -1,6 +1,7 @@
 @import url('dice.css');
 @import url('colorBackground.css');
 @import url('button.css');
+@import url('player.css');
 :root {
   --color-first: #E1CBC6;
   --color-second: #C39389;
@@ -20,6 +21,7 @@ body {
   margin: 0;
   padding: 1em 2em;
   background: var(--color-fifth);
+  font-family: Georgia, sans-serif;
 }
 
 main{
@@ -27,7 +29,6 @@ main{
 }
 
 h1{
-  font-family: Georgia, sans-serif;
   font-size: 5em;
   letter-spacing: -2px;
   font-weight: bold;
@@ -36,6 +37,10 @@ h1{
 
   animation: bounceInLeft; 
   animation-duration: 3s; 
+}
+
+h2{
+  text-align: center;
 }
 hr.style-seven {
   overflow: visible; /* For IE */
@@ -57,8 +62,13 @@ hr.style-seven:before { /* Not really supposed to work, but does */
   border-radius: 20px;
 }
 
+.stage {
+  margin: 0;
+}
 
-
+.stage-two {
+  display: none;
+}
 
 
 @media screen and (max-width:570px){
@@ -83,6 +93,5 @@ hr.style-seven:before { /* Not really supposed to work, but does */
     transform: scale(0.8);
     margin: 1em;
   }
-  .
 }
 

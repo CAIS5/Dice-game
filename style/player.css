@@ -1,0 +1,16 @@
+.gameDisplay {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 1px;
+    margin: 0 auto;
+}
+
+.player{
+    max-width:200px;
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    background: var(--color-sixth);
+}
+

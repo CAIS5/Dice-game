@@ -12,23 +12,16 @@
   <link rel="stylesheet" href="node_modules/animate.css/animate.css">
   <link href="https://fonts.googleapis.com/css2?family=Cardo:wght@700&display=swap" rel="stylesheet">
 </head>
-<section>
-  <h1>Dice Game</h1>
-  <div class="colors">
-    <span class="color--dot color--dot__first"></span>
-    <span class="color--dot color--dot__second"></span>
-    <span class="color--dot color--dot__third"></span>
-    <span class="color--dot color--dot__fourth"></span>
-    <span class="color--dot color--dot__fifth"></span>
-    <span class="color--dot color--dot__sixth"></span>
-  </div>
 
-  <hr class="style-seven">
 
-  
-  <div class="btn-container">
-    <button class="btn btn--onePlayer" onclick="changingFlexOrder()">1 player</button>
-    <button class="btn btn--twoPlayers" onclick="changingFlexOrder()">2 player</button>
+<h1>Dice Game</h1>
+
+
+<hr class="style-seven">
+<section class="stage stage-one">
+  <div class="btn-container btn-stage-one">
+    <button class="btn btn--onePlayer">1 player</button>
+    <button class="btn btn--twoPlayers" >2 player</button>
     <button class="btn btn--help">help</button>
     <div class="overlay">
       <h2>RULE : </h2>
@@ -46,57 +39,94 @@
     </div>
 </section>
 
-<section>
+<section class="stage stage-two">
   <div class="btn-container btn-gameplay">
     <button class="btn btn-dice">Dice</button>
-    <h3 id="playerName"></h3>
-    <div class="dice-wrapper">
-      <div value="1" class="dice dice__one-dot">
-        <span class="dice-dot"></span>
-      </div>
-  
-      <div value="2" class="dice dice__two-dot">
-        <span class="dice-dot"></span>
-        <span class="dice-dot"></span>
-      </div>
-  
-      <div value="3" class="dice dice__three-dot">
-        <span class="dice-dot"></span>
-        <span class="dice-dot"></span>
-        <span class="dice-dot"></span>
-      </div>
-  
-      <div value="4" class="dice dice__four-dot">
-        <span class="dice-dot" id="dot-1"></span>
-        <span class="dice-dot" id="dot-2"></span>
-        <span class="dice-dot" id="dot-3"></span>
-        <span class="dice-dot" id="dot-4"></span>
-      </div>
-  
-      <div value="5" class="dice dice__five-dot">
-        <span class="dice-dot"></span>
-        <span class="dice-dot"></span>
-        <span class="dice-dot"></span>
-        <span class="dice-dot"></span>
-        <span class="dice-dot"></span>
-      </div>
-  
-      <div value="6" class="dice dice__six-dot">
-        <div class="dice__six-dot--col1">
-          <span class="dice-dot"></span>
-          <span class="dice-dot"></span>
-          <span class="dice-dot"></span>
-        </div>
-        <div class="dice__six-dot--col2">
-          <span class="dice-dot"></span>
-          <span class="dice-dot"></span>
-          <span class="dice-dot"></span>
-        </div>
-      </div>
+    <button class="btn btn-back">Back</button>
+  </div>
+  <h2>Target Score : 100</h2>
+  <!-- DICE WRAPPER -->
+ <div class="dice-wrapper">
+   
+
+  <div value="1" class="dice dice__one-dot">
+    <span class="dice-dot"></span>
+  </div>
+  <!-- TWO DOTS -->
+  <div value="2" class="dice dice__two-dot">
+    <span class="dice-dot"></span>
+    <span class="dice-dot"></span>
+  </div>
+  <!-- THREE DOTS -->
+  <div value="3" class="dice dice__three-dot">
+    <span class="dice-dot"></span>
+    <span class="dice-dot"></span>
+    <span class="dice-dot"></span>
+  </div>
+  <!-- FOUR DOTS -->
+  <div value="4" class="dice dice__four-dot">
+    <div class="dice__four-dot--col">
+      <span class="dice-dot"></span>
+      <span class="dice-dot"></span>
+    </div>
+    <div class="dice__four-dot--col">
+      <span class="dice-dot"></span>
+      <span class="dice-dot"></span>
+    </div>
+  </div>
+  <!-- FIVE DOTS -->
+  <div value="5" class="dice dice__five-dot">
+    <div class="dice__five-dot--col">
+      <span class="dice-dot"></span>
+      <span class="dice-dot"></span>
+    </div>
+    <div class="dice__five-dot--col">
+      <span class="dice-dot"></span>
+    </div>
+    <div class="dice__five-dot--col">
+      <span class="dice-dot"></span>
+      <span class="dice-dot"></span>
+    </div>
+  </div>
+  <!-- SIX DOTS -->
+  <div value="6" class="dice dice__six-dot">
+    <div class="dice__six-dot--col1">
+      <span class="dice-dot"></span>
+      <span class="dice-dot"></span>
+      <span class="dice-dot"></span>
+    </div>
+    <div class="dice__six-dot--col2">
+      <span class="dice-dot"></span>
+      <span class="dice-dot"></span>
+      <span class="dice-dot"></span>
+    </div>
+  </div>
+</div>
+ 
+
+  <div class='gameDisplay'>
+    <div class="player player-01"> 
+      <h2 class="player-01--name">Player 01</h2>
+      <h3>Score <span id="player-01--score">0</span></h3>
+    </div>
+
+    <div class="player player-02"> 
+      <h2 class="player-01--name">Player 02</h2>
+      <h3>Score <span id="player-02--score">0</span></h3>
     </div>
   </div>
 </section>
+
 <hr class="style-seven">
+
+<div class="colors">
+  <span class="color--dot color--dot__first"></span>
+  <span class="color--dot color--dot__second"></span>
+  <span class="color--dot color--dot__third"></span>
+  <span class="color--dot color--dot__fourth"></span>
+  <span class="color--dot color--dot__fifth"></span>
+  <span class="color--dot color--dot__sixth"></span>
+</div>
 <script src="index.js" async defer></script>
 </body>
 

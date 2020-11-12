@@ -1,12 +1,11 @@
 @import url('anim.css');
+
 /*generic style for dice*/
 .dice-wrapper {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   position: relative;
-
-  
 }
 
 
@@ -22,10 +21,12 @@
 }
 
 .dice__visibility {
-  border : 5px solid saddlebrown;
-   animation: heartBeat; /*referring directly to the animation's @keyframe declaration */
-   animation-duration: 2s;/* don't forget to set a duration! */
-
+  border: 5px solid saddlebrown;
+  animation: wobble;
+  /*referring directly to the animation's @keyframe declaration */
+  animation-duration: 2s;
+  /* don't forget to set a duration! */
+  display: flex;
 }
 
 .dice .dice-dot {
@@ -69,62 +70,31 @@
 
 /* FOUR-DOT */
 .dice__four-dot {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  gap: 0px 0px;
-  grid-template-areas:
-    "pos1 . pos2"
-    ". . ."
-    "pos3 . pos4";
-  justify-items: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
-.dice__four-dot .dice-dot:nth-of-type(1) {
-  grid-area: pos1;
+.dice__four-dot--col {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
-.dice__four-dot .dice-dot:nth-of-type(2) {
-  grid-area: pos2;
-  justify-self: flex-end;
-}
-.dice__four-dot .dice-dot:nth-of-type(3) {
-  grid-area: pos3;
-  align-self: flex-end;
-}
-.dice__four-dot .dice-dot:nth-of-type(4) {
-  grid-area: pos4;
-  justify-self: flex-end;
-  align-self: flex-end;
-}
+
 
 /* FIVE DOTS */
 .dice__five-dot {
-  display: grid;
-  grid:
-    "pos1 . pos2"
-    ". pos3 ."
-    "pos4 . pos5";
+  display: flex;
+  justify-content: space-between;
 }
-.dice__five-dot .dice-dot:nth-of-type(1) {
-  grid-area: pos1;
+
+.dice__five-dot--col {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
-.dice__five-dot .dice-dot:nth-of-type(2) {
-  grid-area: pos2;
-  justify-self: end;
-}
-.dice__five-dot .dice-dot:nth-of-type(3) {
-  grid-area: pos3;
-  justify-self: center;
-  align-self: center;
-}
-.dice__five-dot .dice-dot:nth-of-type(4) {
-  grid-area: pos4;
-  align-self: end;
-}
-.dice__five-dot .dice-dot:nth-of-type(5) {
-  grid-area: pos5;
-  justify-self: end;
-  align-self: end;
+
+.dice__five-dot--col:nth-of-type(2) {
+  justify-content: center;
 }
 
 /* SIX DOTS */
@@ -132,6 +102,7 @@
   display: flex;
   justify-content: space-between;
 }
+
 .dice__six-dot .dice__six-dot--col1 {
   display: flex;
   flex-direction: column;
